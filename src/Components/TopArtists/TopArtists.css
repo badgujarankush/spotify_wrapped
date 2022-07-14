@@ -1,0 +1,71 @@
+.topArtists{
+    color:white;
+    margin: 2rem;
+}
+.topArtists .banner{
+    display: none;
+}
+.main-section-rest{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.range-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin-bottom: 2rem;
+}
+
+.range-select .btn{
+    padding: 0.5rem 1rem;
+    background-color: #222222;
+    color: rgb(194, 194, 194);
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-size: 1rem;
+}
+.active{
+    background-color: rgb(233, 233, 233) !important;
+    color: black !important;
+}
+.range-select .btn:hover{
+    background-color: rgb(233, 233, 233) ;
+    color: black;
+}
+
+
+.artist-card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    transition: all 0.5s ease-in;
+}
+
+@media screen and (max-width: 1100px) {
+    .artist-card-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .topArtists h1{
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .artist-card-container{
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .topArtists .banner{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+}

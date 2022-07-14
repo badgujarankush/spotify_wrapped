@@ -4,7 +4,7 @@ import '../TopArtists/TopArtists.css'
 import Button from '../Common/Button'
 import {useGetTopArtistsQuery} from '../../Api/spotifyApi'
 
-import Card from '../TopArtists/Card';
+import Card from '../Common/Card';
 const TopArtists = () => {
   const [range, setRange] = useState('long_term');
   const {data:topArtists, error, isLoading} = useGetTopArtistsQuery({limit:20,offset:0,range});

@@ -10,7 +10,7 @@ const Navbar = ({logout}) => {
     <Link to='/' className="banner">Wrapped</Link>
         <div className='user-container'>
             <h1>Welcome</h1>
-            <span style={{color:'#1ED760'}}>{userName}</span>
+            <span>{userName}</span>
         </div>
         <div className='menu-container'>
             <Link to='/'>Dashboard</Link>

@@ -1,21 +1,26 @@
 import React,{useState, useEffect} from 'react'
+import {Bars} from "react-loader-spinner";
 import '../Dashboard/Dashboard.css'
 import {Link} from 'react-router-dom';
 import { useGetRecentlyPlayedQuery,useGetTopArtistsQuery,useGetTopSongsQuery} from '../../Api/spotifyApi'
-
+import {loginURL} from '../../Api/spotify';
 const Dashboard = () => {
 
   const {data:topArtists, error, isLoading} = useGetTopArtistsQuery({limit:5,offset:0,range:'short_term'});
   const {data:topSongs } = useGetTopSongsQuery({limit:5,offset:0,range:'short_term'});
   const {data:recent} = useGetRecentlyPlayedQuery(5);
   if(isLoading){
-    return <div>Loading...</div>;
+    return  <div className='loader'><Bars color="#00BF00" height="80" width="80" /></div>
   }
+  // if(error.status === 401){
+  //   window.location.href(loginURL);
+  //   window.location.reload();
+  // }
   if (error) {
-    return <div>Oops, an error occured</div>;
+
+    return <div className='error'>Error</div>
   }
-  // console.log("topSongs:",topSongs);
-  // console.log("recent: ",recent);
+  
   return (
     <div className='dash'>
     <Link to='/' className="banner">Wrapped</Link>

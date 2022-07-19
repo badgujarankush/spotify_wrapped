@@ -37,6 +37,7 @@ body{
     overflow-x: hidden;
     padding: 10px 25px;
     background-color: #222222;
+  
 }
 /* .main{
   flex: 0.8;
@@ -49,7 +50,7 @@ body{
   margin-left: 22%;
   margin-right: 2%;
   width: 100%;
-
+ 
 }
 
 .banner{
@@ -72,7 +73,14 @@ body{
   padding: 0rem 0rem 1rem 0rem;
 }
 
-
+.loader{
+  /* display: flex; */
+  position: absolute;
+  width: 100%;
+  top:50%;
+  left: 50%;
+  /* transform: translate(-50%,-50%); */
+}
 @media screen and (max-width: 800px) {
 
 }

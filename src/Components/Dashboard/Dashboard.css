@@ -47,7 +47,9 @@ span{
 .title{
     margin-bottom: 1rem;
 }
-
+.error{
+    color: white;
+}
 @media screen and (max-width: 800px) {
     .main-section{
         grid-template-columns: repeat(2,1fr);

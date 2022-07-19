@@ -6,6 +6,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import TopArtists from "./Components/TopArtists/TopArtists";
 import TopSongs from "./Components/TopSongs/TopSongs";
 import { Routes, Route } from "react-router-dom";
+import RecentlyPlayed from "./Components/RecentlyPlayed/RecentlyPlayed";
 
 function App() {
   const [token, setToken] = useState("");
@@ -13,6 +14,7 @@ function App() {
     setToken("");
     window.localStorage.removeItem("token");
   };
+
   useEffect(() => {
     const hash = window.location.hash;
     let token = window.localStorage.getItem("token");
@@ -48,6 +50,7 @@ function App() {
                 <Route index exact path="/" element={<Dashboard />} />
                 <Route exact path="/topArtists" element={<TopArtists />} />
                 <Route exact path="/topSongs" element={<TopSongs />} />
+                <Route exact path="/recentlyPlayed" element={<RecentlyPlayed />} />
                 {/* <Route exact path="/favouriteGenre" element={<FavouriteGenre />} /> */}
               </Routes>
             </div>

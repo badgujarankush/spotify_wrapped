@@ -24,14 +24,20 @@
 .user-container{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     margin: 1rem;
     gap: 0.7rem;
+    align-items: flex-start;
 
 }
 .user-container h1{
     font-size: 1rem;
     color: #A6A5B7;
+}
+.user-container span{
+    display: inline-block;
+    color:#1ED760;
+
 }
 .menu-container{
     display: flex;

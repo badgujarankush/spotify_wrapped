@@ -7,3 +7,14 @@
 .main-section-rest{
     margin-top: 2rem;
 }
+
+.top-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header img{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}

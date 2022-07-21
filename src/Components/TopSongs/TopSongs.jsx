@@ -13,9 +13,10 @@ const TopSongs = () => {
     data: topSongs,
     error,
     isLoading,
+    isFetching
   } = useGetTopSongsQuery({ limit: 20, offset: 0, range });
 
-  if (isLoading) {
+  if (isLoading || isFetching) {
     return  <div className="loader"><Bars color="#00BF00" height="80" width="80" /></div>
   }
   console.log("topSongs:", topSongs);

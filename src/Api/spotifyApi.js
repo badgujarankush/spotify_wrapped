@@ -15,6 +15,9 @@ export const spotifyApi = createApi({
     getUser: builder.query({
       query: () => createRequest(`/me`),
     }),
+    getUserPlaylist: builder.query({
+      query: (user_id) => createRequest(`/users/${user_id}/playlists`)
+    }),
     getTopArtists: builder.query({
       query: ({limit,offset,range}) =>createRequest(`/me/top/artists?limit=${limit}&offset=${offset}&time_range=${range}`)
     }),
@@ -27,4 +30,4 @@ export const spotifyApi = createApi({
   }),
 });
 
-export const {useGetUserQuery, useGetTopArtistsQuery, useGetTopSongsQuery,useGetRecentlyPlayedQuery}  = spotifyApi;
+export const {useGetUserQuery,useGetUserPlaylistQuery, useGetTopArtistsQuery, useGetTopSongsQuery,useGetRecentlyPlayedQuery}  = spotifyApi;

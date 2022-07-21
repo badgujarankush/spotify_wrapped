@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {Bars} from "react-loader-spinner";
+import { Bars } from "react-loader-spinner";
 import "../TopSongs/TopSongs.css";
 import { useGetTopSongsQuery } from "../../Api/spotifyApi";
 
@@ -13,12 +13,16 @@ const TopSongs = () => {
     data: topSongs,
     error,
     isLoading,
-    isFetching
+    isFetching,
   } = useGetTopSongsQuery({ limit: 20, offset: 0, range });
 
-  if (isLoading || isFetching) {
-    return  <div className="loader"><Bars color="#00BF00" height="80" width="80" /></div>
-  }
+  // if (isLoading || isFetching) {
+  //   return (
+  //     <div className="loader">
+  //       <Bars color="#00BF00" height="80" width="80" />
+  //     </div>
+  //   );
+  // }
   console.log("topSongs:", topSongs);
   return (
     <div className="topArtists">
@@ -30,15 +34,16 @@ const TopSongs = () => {
         <Button range={range} setRange={setRange} />
 
         <div className="tracks-card-container">
-          
-          {topSongs?.items?.map((item, index) => (
-            <Track
-              track = {item}
-              ind = {index}
-            />
-          ))}
+          {isLoading || isFetching ? (
+            <div className="loader">
+              <Bars color="#00BF00" height="80" width="80" />
+            </div>
+          ) : (
+            topSongs?.items?.map((item, index) => (
+              <Track track={item} ind={index} />
+            ))
+          )}
         </div>
-       
       </div>
     </div>
   );

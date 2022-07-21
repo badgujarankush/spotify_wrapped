@@ -18,6 +18,8 @@ const Navbar = ({logout}) => {
             <Link to='/topSongs'>Top Song</Link>
             <Link to='/favouriteGenre'>Favourite Genre</Link>
             <Link to='/recentlyPlayed'>Recently Played</Link>
+            <Link to='/playlists'>Playlists</Link>
+
         </div>
 
         <a id='logout' onClick={logout}>LogOut</a>

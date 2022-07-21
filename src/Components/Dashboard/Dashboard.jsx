@@ -6,10 +6,10 @@ import { useGetRecentlyPlayedQuery,useGetTopArtistsQuery,useGetTopSongsQuery} fr
 import {loginURL} from '../../Api/spotify';
 const Dashboard = () => {
 
-  const {data:topArtists, error, isLoading} = useGetTopArtistsQuery({limit:5,offset:0,range:'long_term'});
+  const {data:topArtists, error, isFetching} = useGetTopArtistsQuery({limit:5,offset:0,range:'long_term'});
   const {data:topSongs } = useGetTopSongsQuery({limit:5,offset:0,range:'long_term'});
   const {data:recent} = useGetRecentlyPlayedQuery(5);
-  if(isLoading){
+  if(isFetching){
     return  <div className='loader'><Bars color="#00BF00" height="80" width="80" /></div>
   }
   // if(error.status === 401){

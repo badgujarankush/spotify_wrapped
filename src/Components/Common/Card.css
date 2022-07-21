@@ -34,7 +34,12 @@
   .fade:hover::after{
     opacity: 0.5;
   }
-
+  .link-tag{
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    text-decoration: none;
+  }
   @media screen and (max-width: 800px) {
     .card {
       width: 8rem;

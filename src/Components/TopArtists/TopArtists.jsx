@@ -13,7 +13,7 @@ const TopArtists = () => {
     error,
     isLoading,
     isFetching,
-  } = useGetTopArtistsQuery({ limit: 20, offset: 0, range });
+  } = useGetTopArtistsQuery({ limit: 40, offset: 0, range });
 
   // if(isLoading || isFetching){
   //   return  <div className='loader'><Bars color="#00BF00" height="80" width="80" /></div>

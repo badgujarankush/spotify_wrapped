@@ -45,30 +45,33 @@ const Recent = ({track,time}) => {
 
 
   return (
-    <div className='track'>
+    <a class="track-link" href={track?.external_urls?.spotify} target='_blank' rel="noreferrer">
+        <div className='track'>
       
-        <div className='track-image'>
+      <div className='track-image'>
+  
+          <img src={track.album.images[0].url} alt='mgk'/>
+      </div>
+      <div className='track-details'>
+          <div className='track-name'>
+          <a href={track?.external_urls?.spotify}>{track.name}</a>
+          
+          </div>
+          <div className='track-artists'>
+
+          {track?.artists?.map(
+              (i, ind) =>(
+                  i.name + (ind === track.artists.length -1 ?" ":", "))
+
+            )}
+          </div>
+      </div>
+      <div className='time-stamp'>
+          {getDiff(time.played_at)}
+      </div>
+  </div>
+    </a>
     
-            <img src={track.album.images[0].url} alt='mgk'/>
-        </div>
-        <div className='track-details'>
-            <div className='track-name'>
-            <a href={track?.external_urls?.spotify}>{track.name}</a>
-            
-            </div>
-            <div className='track-artists'>
-
-            {track?.artists?.map(
-                (i, ind) =>(
-                    i.name + (ind === track.artists.length -1 ?" ":", "))
-
-              )}
-            </div>
-        </div>
-        <div className='time-stamp'>
-            {getDiff(time.played_at)}
-        </div>
-    </div>
   )
 }
 

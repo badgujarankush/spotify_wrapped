@@ -8,6 +8,7 @@ import TopSongs from "./Components/TopSongs/TopSongs";
 import { Routes, Route } from "react-router-dom";
 import RecentlyPlayed from "./Components/RecentlyPlayed/RecentlyPlayed";
 import Playlist from "./Components/Playlists/Playlist";
+import FavouriteGenre from "./Components/TopGenre/FavouriteGenre";
 
 function App() {
   const [token, setToken] = useState("");
@@ -53,7 +54,7 @@ function App() {
                 <Route exact path="/topSongs" element={<TopSongs />} />
                 <Route exact path="/recentlyPlayed" element={<RecentlyPlayed />} />
                 <Route exact path="/playlists" element={<Playlist />} />
-                {/* <Route exact path="/favouriteGenre" element={<FavouriteGenre />} /> */}
+                <Route exact path="/favouriteGenre" element={<FavouriteGenre />} />
               </Routes>
             </div>
           </div>

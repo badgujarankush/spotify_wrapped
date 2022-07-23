@@ -14,7 +14,7 @@ const TopSongs = () => {
     error,
     isLoading,
     isFetching,
-  } = useGetTopSongsQuery({ limit: 20, offset: 0, range });
+  } = useGetTopSongsQuery({ limit: 50, offset: 0, range });
 
   // if (isLoading || isFetching) {
   //   return (

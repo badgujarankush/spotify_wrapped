@@ -4,6 +4,7 @@
 }
 .dash .banner{
     display: none;
+    font-size: 3rem;
 }
 .main-section{
     display: grid;
@@ -64,6 +65,9 @@ span{
     }
     .dash .banner{
         display: block;
+    }
+    .dash{
+        margin: 0.5rem 2rem 1rem 2rem;
     }
     .navbar{
         display: none;

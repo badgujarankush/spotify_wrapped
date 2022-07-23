@@ -17,8 +17,10 @@ const Dashboard = () => {
   //   window.location.reload();
   // }
   if (error) {
-
-    return <div className='error'>Error</div>
+    if(error.status ===401){
+      return <div className='error'>Error Please refresh</div>
+    }
+    return <div className='error'>Error, plese logout and then refresh</div>
   }
   
   return (

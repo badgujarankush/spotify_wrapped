@@ -11,10 +11,11 @@ const Track = ({track,ind}) => {
           : minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
       };
     
-      
+    
 
   return (
-    <a class="track-link" href={track?.external_urls?.spotify} rel="noreferrer">
+    <>
+    <a class="track-link" href={track?.external_urls?.spotify} target='_blank' rel="noreferrer">
         <div className='track'>
         <div className='rank'>
        
@@ -26,6 +27,7 @@ const Track = ({track,ind}) => {
         </div>
         <div className='track-details'>
             <div className='track-name'>
+            
             <a href={track?.external_urls?.spotify}>{track.name}</a>
             
             </div>
@@ -44,7 +46,7 @@ const Track = ({track,ind}) => {
         </div>
     </div>
     </a>
-    
+    </>
   )
 }
 

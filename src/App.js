@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { Link } from "react-router-dom";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import Navbar from "./Components/Navbar/Navbar";
 import Dashboard from "./Components/Dashboard/Dashboard";
@@ -9,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import RecentlyPlayed from "./Components/RecentlyPlayed/RecentlyPlayed";
 import Playlist from "./Components/Playlists/Playlist";
 import FavouriteGenre from "./Components/TopGenre/FavouriteGenre";
-
+import './misc'
 function App() {
   const [token, setToken] = useState("");
   const logout = () => {
@@ -47,7 +48,14 @@ function App() {
               <Navbar logout={logout} />
             </div>
             <div className="main">
-         
+              <div className="header">
+              <Link to='/' className="banner">Wrapped</Link>
+              <div className="burgerMenu">
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+              </div>
+              </div>
               <Routes>
                 <Route index exact path="/" element={<Dashboard />} />
                 <Route exact path="/topArtists" element={<TopArtists />} />

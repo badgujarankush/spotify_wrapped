@@ -26,9 +26,6 @@ const TopSongs = () => {
   console.log("topSongs:", topSongs);
   return (
     <div className="topArtists">
-      <Link to="/" className="banner">
-        Wrapped
-      </Link>
       <h1>Top Songs</h1>
       <div className="main-section-rest">
         <Button range={range} setRange={setRange} />

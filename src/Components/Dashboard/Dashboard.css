@@ -55,7 +55,12 @@ span{
     .main-section{
         grid-template-columns: repeat(2,1fr);
     }
+    .dash .banner{
+        display: block;
+    }
 }
+
+
 
 @media screen and (max-width: 500px) {
     .main-section{
@@ -63,13 +68,13 @@ span{
         justify-content: center;
         align-items: center;
     }
-    .dash .banner{
+    /* .dash .banner{
         display: block;
-    }
+    } */
     .dash{
         margin: 0.5rem 2rem 1rem 2rem;
     }
-    .navbar{
+    /* .navbar{
         display: none;
-    }
+    } */
 }

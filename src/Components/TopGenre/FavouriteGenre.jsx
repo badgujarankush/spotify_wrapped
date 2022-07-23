@@ -61,9 +61,7 @@ const FavouriteGenre = () => {
 
   return (
     <div className="topArtists">
-    <Link to="/" className="banner">
-      Wrapped
-    </Link>
+ 
     <h1>Favourite Genre</h1>
 
      <div className="favourite main-section-rest">

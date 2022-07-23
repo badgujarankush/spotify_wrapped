@@ -22,9 +22,7 @@ const TopArtists = () => {
 
   return (
     <div className="topArtists">
-      <Link to="/" className="banner">
-        Wrapped
-      </Link>
+      
       <h1>Top Artists</h1>
       <div className="main-section-rest">
         <Button range={range} setRange={setRange} />

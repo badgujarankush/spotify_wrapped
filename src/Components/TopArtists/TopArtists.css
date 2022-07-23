@@ -55,7 +55,11 @@
         margin-bottom: 2rem;
     }
 }
-
+@media screen and (max-width:800px) {
+    .topArtists .banner{
+        display: block;
+    }
+}
 @media screen and (max-width: 500px) {
     .artist-card-container{
         grid-template-columns: repeat(2,1fr);
@@ -63,11 +67,11 @@
         align-items: center;
         gap:1rem;
     }
-    .topArtists .banner{
+    /* .topArtists .banner{
         display: block;
-    }
-    .navbar{
+    } */
+    /* .navbar{
         display: none;
-    }
+    } */
 
 }

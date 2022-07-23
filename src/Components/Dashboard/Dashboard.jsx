@@ -25,7 +25,8 @@ const Dashboard = () => {
   
   return (
     <div className='dash'>
-    <Link to='/' className="banner">Wrapped</Link>
+
+    {/* <Link to='/' className="banner">Wrapped</Link> */}
       <h1>Dashboard</h1>
 
       <div className='main-section'>

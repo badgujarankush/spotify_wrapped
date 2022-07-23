@@ -17,10 +17,8 @@ const Playlist = () => {
 
 
   return (
-    <div className="topArtists">
-      <Link to="/" className="banner">
-        Wrapped
-      </Link>
+    <div className="topArtists playlist">
+      
       <h1>Your Playlists</h1>
       <div className="main-section-rest">
         

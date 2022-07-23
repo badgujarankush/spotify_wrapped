@@ -29,9 +29,7 @@ const RecentlyPlayed = () => {
   console.log("recently played: ", recent);
   return (
     <div className="topArtists">
-      <Link to="/" className="banner">
-        Wrapped
-      </Link>
+      
       <div className="top-header">
         <h1>Recently Played</h1>
         <img onClick={refetch} src={refresh} alt="reload" />

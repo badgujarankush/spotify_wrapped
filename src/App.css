@@ -37,7 +37,7 @@ body{
     overflow-x: hidden;
     padding: 10px 25px;
     background-color: #222222;
-  
+    transition: all 0.3s ease-in;
 }
 
 
@@ -66,7 +66,6 @@ body{
   width: 100%;
   top:50%;
   left: 50%;
-  /* transform: translate(-50%,-50%); */
 }
 .header{
   position: relative;
@@ -93,6 +92,7 @@ body{
   border-radius: 2px;
   transition: 0.2s ease-in-out;
 }
+
 
 
 @media screen and (max-width: 800px) {

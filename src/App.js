@@ -10,12 +10,13 @@ import { Routes, Route } from "react-router-dom";
 import RecentlyPlayed from "./Components/RecentlyPlayed/RecentlyPlayed";
 import Playlist from "./Components/Playlists/Playlist";
 import FavouriteGenre from "./Components/TopGenre/FavouriteGenre";
-import './misc'
+import BurgerMenu from "./Components/Common/BurgerMenu";
+
 function App() {
   const [token, setToken] = useState("");
   const logout = () => {
     setToken("");
-    window.localStorage.removeItem("token");
+    // window.localStorage.removeItem("token");
   };
 
   useEffect(() => {
@@ -35,6 +36,12 @@ function App() {
     setToken(token);
   }, []);
 
+
+  const [isActive, setActive] = useState("false");
+  const handleToggle=()=>{
+      setActive(!isActive);
+      
+  }
   
   return (
     <div className="App">
@@ -44,17 +51,18 @@ function App() {
       ) : (
         <>
           <div className="dashboard">
-            <div className="navbar">
+            <div className={"navbar" +(!isActive ? " nav-active":"")}>
               <Navbar logout={logout} />
             </div>
             <div className="main">
               <div className="header">
               <Link to='/' className="banner">Wrapped</Link>
-              <div className="burgerMenu">
+              <div onClick={handleToggle} className={"burgerMenu" + (!isActive? " toggle": "")}>
                 <div className="line1"></div>
                 <div className="line2"></div>
                 <div className="line3"></div>
               </div>
+              {/* <BurgerMenu/> */}
               </div>
               <Routes>
                 <Route index exact path="/" element={<Dashboard />} />

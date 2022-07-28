@@ -18,6 +18,8 @@ const Dashboard = () => {
   // }
   if (error) {
     if(error.status ===401){
+      // window.localStorage.removeItem("token");
+      // window.location = window.location.refresh;
       return <div className='error'>Error Please refresh</div>
     }
     return <div className='error'>Error, plese logout and then refresh</div>
